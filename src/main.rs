@@ -33,13 +33,13 @@ fn main() {
     };
         
 
-    let guess: u32 = match guess.trim().parse() {
+    let guess = guess.trim().parse::<f64>().expect("text").round() as i32; /* {
         Ok(num) => num,
         Err(_) => {
             println!("Bad input you Lord of Computer science.");
             continue;
         }
-    };
+    }; */
 
     println!("You guessed: {}", guess);
 
